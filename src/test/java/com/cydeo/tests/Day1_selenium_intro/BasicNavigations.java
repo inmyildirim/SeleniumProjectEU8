@@ -14,6 +14,9 @@ public class BasicNavigations {
         // This is the line opening an empty browser
         WebDriver driver = new ChromeDriver();
 
+        // this code will maximize the browser size
+        driver.manage().window().maximize();
+
         //3- Go to "https://www.tesla.com"
         driver.get("https://www.tesla.com");
 
@@ -25,23 +28,26 @@ public class BasicNavigations {
         String currentURL = driver.getCurrentUrl();
         System.out.println("currentURL = " + currentURL);
 
-        //stop the code execution for 3 seconds
+        //stop the code execution for 3 seconds------------------------------------------
         Thread.sleep(3000);
 
         // use selenium to navigate back
         driver.navigate().back();
 
-        //stop the code execution for 3 seconds
+        //stop the code execution for 3 seconds------------------------------------------
         Thread.sleep(3000);
 
         // use selenium to navigate forward
         driver.navigate().forward();
 
-        //stop the code execution for 3 seconds
+        //stop the code execution for 3 seconds------------------------------------------
         Thread.sleep(3000);
 
         // use selenium to navigate refresh
         driver.navigate().refresh();
+
+        //stop the code execution for 3 seconds------------------------------------------
+        Thread.sleep(3000);
 
         // use navigate.to():
         driver.navigate().to("https://www.google.com");
