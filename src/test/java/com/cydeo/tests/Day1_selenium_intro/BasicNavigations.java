@@ -17,6 +17,8 @@ public class BasicNavigations {
         // this code will maximize the browser size
         driver.manage().window().maximize();
 
+        // driver.manage().window().fullscreen();  --> it doesn't work sometimes
+
         //3- Go to "https://www.tesla.com"
         driver.get("https://www.tesla.com");
 
