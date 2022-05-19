@@ -8,10 +8,14 @@ public class TestNG {
     @Test (priority = 1)
     public void test1(){
         System.out.println("Test 1 is running...");
+
+        //Assert Equals 2 compare of the same things
         String actual = "apple";
-        String expected = "apple2";
+        String expected = "apple";
         Assert.assertEquals(actual,expected);
     }
+
+
 
     @Test (priority = 2)
     public void test2(){
