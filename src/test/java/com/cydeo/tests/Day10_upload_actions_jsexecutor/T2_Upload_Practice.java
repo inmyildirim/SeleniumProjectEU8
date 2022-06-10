@@ -4,6 +4,7 @@ import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class T2_Upload_Practice {
@@ -21,12 +22,17 @@ public class T2_Upload_Practice {
         WebElement fileUpload = Driver.getDriver().findElement(By.id("file-upload"));
 
         BrowserUtils.sleep(2);
-        // fileUpload.click(); doesn't work
-
         fileUpload.sendKeys(path);
+        // fileUpload.click(); doesn't work! If we click button. it goes out of browser and we can not add element from out of the browser.
+
+        WebElement uploadButton = Driver.getDriver().findElement(By.id("file-submit"));
+        uploadButton.click();
+
+        WebElement fileUploadedHeader = Driver.getDriver().findElement(By.tagName("h3"));
 
         //4. Assert:
         //-File uploaded text is displayed on the page
+        Assert.assertTrue(fileUploadedHeader.isDisplayed());
 
 
 
