@@ -1,5 +1,6 @@
 package com.cydeo.tests.Day10_upload_actions_jsexecutor;
 
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -18,6 +19,11 @@ public class T2_Upload_Practice {
 
         //3. Upload the file.
         WebElement fileUpload = Driver.getDriver().findElement(By.id("file-upload"));
+
+        BrowserUtils.sleep(2);
+        // fileUpload.click(); doesn't work
+
+        fileUpload.sendKeys(path);
 
         //4. Assert:
         //-File uploaded text is displayed on the page
