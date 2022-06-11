@@ -33,8 +33,6 @@ public class Driver {
             This way, we can control which browser is opened from outside our code, from configuration.properties.
              */
             String browserType = ConfigurationReader.getProperty("browser");
-
-
             /*
                 Depending on the browserType that will be return from configuration.properties file
                 switch statement will determine the case, and open the matching browser
@@ -59,4 +57,43 @@ public class Driver {
         return driver;
 
     }
+
+    /*
+    This method will make sure our driver value is always null after using quit() method
+     */
+    public static void closeDriver(){
+        if(driver!=null){
+            driver.quit(); // this line will terminate the existing session. value will not even be null
+            driver = null;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
