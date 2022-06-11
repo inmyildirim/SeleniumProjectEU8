@@ -2,6 +2,7 @@ package com.cydeo.tests.Day12_pom_design_Explicit_wait;
 
 import com.cydeo.pages.LibraryLoginPage;
 import com.cydeo.utilities.Driver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class POMPractices {
@@ -21,6 +22,7 @@ public class POMPractices {
 
 
         //5- Verify expected error is displayed:
+        Assert.assertTrue(libraryLoginPage.fieldRequiredErrorMessage.isDisplayed());
 
 
 
