@@ -10,7 +10,7 @@ public class LibraryLoginPage {
 
     // 1- initialize the driver instance and object of the class
     public LibraryLoginPage(){
-        // initElements method will create connection in between the current driver seesion(instance) and the object of the current class
+        // initElements method will create connection in between the current driver session(instance) and the object of the current class
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -28,11 +28,12 @@ public class LibraryLoginPage {
     @FindBy(xpath = "//div[.='This field is required.']/div")
     public WebElement fieldRequiredErrorMessage;
 
-    @FindBy(xpath = "//div[.='Please enter a valid email adress']/div")
+    @FindBy(xpath = "//div[.='Please enter a valid email address.']/div")
     public WebElement enterValidEmailErrorMessage;
 
-    @FindBy(xpath = "//div[.='Sorry, Wrong Email or Password']/div")
-    public WebElement wrongEmailorPasswordErrorMessage;
+    @FindBy(xpath = "//div[.='Sorry, Wrong Email or Password']")
+    public WebElement wrongEmailOrPasswordErrorMessage;
+
 
 
 }
