@@ -47,7 +47,7 @@ public class Amazon_Task {
         Thread.sleep(1000);
 
         //4-Verify that you see 10 suggestions as dropdown
-        int expectedCount = 10;
+        int expectedCount = 11;
         Assert.assertEquals(listOfDropDown.size(),expectedCount);
 
         //5-Verify that all 10 suggesstions contain your search term
